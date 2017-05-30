@@ -2,7 +2,7 @@
 
 angular.module('chattyApp')
   .service('messageService', function ( $http ) {
-    
+
       this.getMessages = function () {
         return $http.get('/messages');
       }
@@ -10,5 +10,5 @@ angular.module('chattyApp')
       this.addMessage = function ( message ) {
         return $http.post('/messages', { message: message });
       }
-    
+
   });
